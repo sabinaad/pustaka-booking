@@ -24,7 +24,7 @@ class User extends CI_Controller
     {
         $data['judul'] = 'Data Anggota';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
-        $this->db->where('role_id', 2);
+        //$this->db->where('role_id', 2);
 
         $data['anggota'] = $this->db->get('user')->result_array();
         $this->db->from('user');
